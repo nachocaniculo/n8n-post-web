@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,29 @@
 <body>
     <div class="container">
         <h1>Ansible Playbook Generator</h1>
-        <textarea id="prompt" placeholder="Describe what you want to deploy with Ansible on an AWS EC2 machine..."></textarea>
+        <input
+            type="password"
+            id="apiKey"
+            placeholder="Enter your API key"
+            autocomplete="off"
+        />
+
+        <textarea
+            id="prompt"
+            placeholder="Describe what you want to deploy with Ansible on an AWS EC2 machine..."
+        ></textarea>
+
+        <div class="option">
+            <label>
+                <input type="checkbox" id="httpsAccess">
+                Allow HTTPS access (port 443)
+            </label>
+        </div>
+
         <button id="sendBtn">Send</button>
         <div class="status" id="status"></div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>

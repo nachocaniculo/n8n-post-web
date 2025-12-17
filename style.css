@@ -68,3 +68,32 @@ button:hover {
     font-weight: bold;
     min-height: 1.2em;
 }
+
+.option {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.option label {
+    cursor: pointer;
+}
+
+.option input {
+    margin-right: 0.5rem;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+input[type="password"]::placeholder {
+    color: #aaa;
+}
