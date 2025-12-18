@@ -1,11 +1,9 @@
 const button = document.getElementById('sendBtn');
 const status = document.getElementById('status');
-const httpsCheckbox = document.getElementById('httpsAccess');
 const apiKeyInput = document.getElementById('apiKey');
 
 button.addEventListener('click', async () => {
     const prompt = document.getElementById('prompt').value.trim();
-    const httpsAccess = httpsCheckbox.checked;
 
     if (!prompt) {
         status.textContent = 'Please type your prompt.';
@@ -18,7 +16,6 @@ button.addEventListener('click', async () => {
 
     // Bloquear controles
     button.disabled = true;
-    httpsCheckbox.disabled = true;
 
     const apiKey = apiKeyInput.value.trim();
 
@@ -38,8 +35,7 @@ button.addEventListener('click', async () => {
                     'Authorization': `${apiKey}`
                 },
                 body: JSON.stringify({
-                    prompt: prompt,
-                    allow_https: httpsAccess
+                    prompt: prompt
                 })
             }
         );
@@ -114,6 +110,5 @@ button.addEventListener('click', async () => {
     } finally {
         // Desbloquear controles SIEMPRE
         button.disabled = false;
-        httpsCheckbox.disabled = false;
     }
 });
