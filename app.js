@@ -27,7 +27,7 @@ button.addEventListener('click', async () => {
 
     try {
         const response = await fetch(
-            'https://n8n3.alpinia.digital/webhook-test/838da8ef-6840-4850-af47-3806d00c2d20',
+            'https://n8n3.alpinia.digital/webhook/838da8ef-6840-4850-af47-3806d00c2d20',
             {
                 method: 'POST',
                 headers: {
