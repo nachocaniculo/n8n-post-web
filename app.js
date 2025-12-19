@@ -50,12 +50,6 @@ button.addEventListener('click', async () => {
                     HTTP: <a href="${data.addressHTTP}" target="_blank">${data.addressHTTP}</a><br>
                 `;
 
-                if (httpsAccess && data.addressHTTPS) {
-                    html += `
-                        HTTPS: <a href="${data.addressHTTPS}" target="_blank">${data.addressHTTPS}</a>
-                    `;
-                }
-
                 status.innerHTML = html;
                 status.style.color = 'green';
 
