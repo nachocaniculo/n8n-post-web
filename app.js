@@ -53,9 +53,7 @@ button.addEventListener('click', async () => {
                 status.innerHTML = html;
                 status.style.color = 'green';
 
-                if (httpsAccess && data.addressHTTPS) {
-                    window.open(data.addressHTTPS, '_blank');
-                } else if (data.addressHTTP) {
+                if (data.addressHTTP) {
                     window.open(data.addressHTTP, '_blank');
                 }
 
